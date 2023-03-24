@@ -6,7 +6,6 @@
                 <li>Limpa atividades</li>
             </ul>
         </li>
-
         <li>Lista de receitas
             <ul>
                 <li>Filtra lista de pesquisas</li>
