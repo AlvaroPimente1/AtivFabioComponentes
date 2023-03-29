@@ -51,8 +51,10 @@ function FiltroBusca(text) {
     const renderItem = ({item}) =>{
         return(
             <View style={styles.lista}>
-                <Image source={item.image} style={{ width: 40, height: 40, borderRadius: 15}}></Image>
-                <Text style={{fontSize: 18, color: '#fff', marginLeft: 10, paddingVertical: 9}}>{item.name}</Text>
+                <View style={{flexDirection: 'row'}}>
+                    <Image source={item.image} style={{ width: 40, height: 40, borderRadius: 15}}></Image>
+                    <Text style={{fontSize: 18, color: '#fff', marginLeft: 10, paddingVertical: 9}}>{item.name}</Text>
+                </View>
                 {isHidden ? null : (
                     <View style={styles.visu}>
                         <Text style={styles.textVisu}>{item.receita}</Text>
@@ -122,7 +124,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#7F77D3',
         borderRadius: 5, 
         marginVertical: 3,
-        flexDirection: "row"
     },
 
     Text: {
@@ -153,6 +154,7 @@ const styles = StyleSheet.create({
     textVisu: {
         fontSize: 14,
         fontStyle: 'italic',
-        color: '#000'
+        color: '#000',
+        flexDirection: 'column'
     }
 });
